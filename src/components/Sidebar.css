@@ -1,0 +1,142 @@
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  min-height: 100vh;
+
+  background: #172136;
+  color: white;
+
+  padding: 28px 18px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.sidebar-logo {
+  padding: 5px 12px 30px;
+}
+
+.sidebar-logo h2 {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sidebar-logo span {
+  display: block;
+
+  margin-top: 7px;
+
+  font-size: 11px;
+  letter-spacing: 3px;
+
+  color: #94a3b8;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+
+  padding: 13px 14px;
+
+  border-radius: 9px;
+
+  color: #e2e8f0;
+  text-decoration: none;
+
+  font-size: 16px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav-item:hover {
+  background: #263653;
+  color: white;
+}
+
+
+/* =========================
+   ACTIVE LINK
+========================= */
+
+.nav-item.active {
+  background: #334a78;
+  color: white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+
+    padding: 12px;
+  }
+
+  .sidebar-logo {
+    display: none;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    gap: 5px;
+  }
+
+  .nav-item {
+    flex: 1;
+
+    justify-content: center;
+
+    padding: 11px 5px;
+
+    font-size: 13px;
+
+    text-align: center;
+  }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .nav-item {
+    font-size: 11px;
+
+    padding: 10px 3px;
+  }
+} 

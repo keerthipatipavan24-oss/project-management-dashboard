@@ -1,0 +1,261 @@
+/* Main page */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f7fb;
+  padding: 20px;
+}
+
+/* Login card */
+.auth-card {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 45px;
+  border-radius: 18px;
+  border: 1px solid #d6deea;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* Heading */
+.auth-card h1 {
+  text-align: center;
+  margin: 0 0 10px;
+  color: #111;
+}
+
+/* Welcome text */
+.auth-card > p {
+  text-align: center;
+  color: #23446b;
+  margin: 0 0 35px;
+  font-size: 20px;
+}
+
+/* Form labels */
+.auth-card form > label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #17365d;
+}
+
+/* Normal inputs */
+.auth-card input[type="email"] {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 22px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.auth-card input[type="email"]:focus {
+  border-color: #2563eb;
+}
+
+/* Password row */
+.password-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+/* Password input */
+.password-box input {
+  flex: 1;
+  min-width: 0;
+  width: auto !important;
+  padding: 16px;
+  margin: 0 !important;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.password-box input:focus {
+  border-color: #2563eb;
+}
+
+/* Show / Hide button */
+.password-box button {
+  flex: 0 0 auto;
+  padding: 14px 8px;
+  border: none;
+  background: transparent;
+  color: #0757e8;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.password-box button:hover {
+  color: #003bb5;
+}
+
+/* Remember + Forgot password */
+.remember-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+/* Remember Me */
+.remember-row label {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  margin: 0 !important;
+  font-weight: normal !important;
+  color: #17365d;
+}
+
+/* Checkbox */
+.remember-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+/* Forgot password */
+.remember-row a {
+  color: #0757e8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.remember-row a:hover {
+  text-decoration: underline;
+}
+
+/* Error message */
+.error-message {
+  color: #dc2626 !important;
+  background: #fee2e2;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: left !important;
+  margin-bottom: 15px !important;
+}
+
+/* Login button */
+.primary-button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2864e8;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+/* Register text */
+.auth-card > p:last-child {
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #17365d;
+}
+
+.auth-card > p:last-child a {
+  color: #0757e8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-card > p:last-child a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 30px 22px;
+  }
+
+  .remember-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+} 
+
+/* ===== PASSWORD FIX ===== */
+
+.auth-card .password-box {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+
+  width: 100% !important;
+  height: auto !important;
+
+  padding: 0 !important;
+  margin: 0 0 30px 0 !important;
+
+  border: none !important;
+  border-radius: 0 !important;
+
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Password input */
+.auth-card .password-box input {
+  flex: 1 1 auto !important;
+
+  width: 100% !important;
+  height: 50px !important;
+  min-width: 0 !important;
+
+  margin: 0 !important;
+  padding: 12px 15px !important;
+
+  border: 1px solid #ccc !important;
+  border-radius: 8px !important;
+
+  box-sizing: border-box !important;
+}
+
+/* Show button */
+.auth-card .password-box button {
+  flex: 0 0 auto !important;
+
+  width: auto !important;
+  height: 50px !important;
+
+  margin: 0 !important;
+  padding: 0 5px !important;
+
+  border: none !important;
+  border-radius: 0 !important;
+
+  background: transparent !important;
+  box-shadow: none !important;
+
+  color: #0757e8 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+
+  cursor: pointer !important;
+} 

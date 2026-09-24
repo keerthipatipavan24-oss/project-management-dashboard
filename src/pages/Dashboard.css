@@ -1,0 +1,357 @@
+/* =========================
+   DASHBOARD
+========================= */
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background: #f4f7fb;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.page-header p {
+  margin: 0;
+  font-size: 20px;
+  color: #365b82;
+}
+
+
+/* =========================
+   STATISTICS CARDS
+========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+}
+
+.card span {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #496987;
+}
+
+.card strong {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 42px;
+  line-height: 1;
+  color: #111827;
+}
+
+.card small {
+  font-size: 16px;
+  color: #365b82;
+}
+
+
+/* =========================
+   CONTENT BOX
+========================= */
+
+.content-box {
+  background: #ffffff;
+  padding: 36px;
+  margin-bottom: 32px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.section-header h2,
+.content-box > h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #111827;
+}
+
+.section-header p {
+  margin: 0;
+  font-size: 16px;
+  color: #365b82;
+}
+
+
+/* =========================
+   VIEW ALL BUTTON
+========================= */
+
+.primary-button.small {
+  width: auto;
+  min-width: 120px;
+  padding: 12px 22px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.primary-button.small:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   PROJECT LIST
+========================= */
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 20px 24px;
+
+  border: 1px solid #dbe4ef;
+  border-radius: 12px;
+
+  transition: background 0.2s ease,
+              border-color 0.2s ease,
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.project-item:hover {
+  background: #f8fbff;
+  border-color: #bfd0e5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.07);
+}
+
+.project-item h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #111827;
+}
+
+.project-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #496987;
+}
+
+.project-item > span {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   ACTIVITY
+========================= */
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.activity-item {
+  padding: 18px 20px;
+  border-left: 4px solid #2563eb;
+  background: #f8fafc;
+  border-radius: 8px;
+
+  transition: background 0.2s ease,
+              transform 0.2s ease;
+}
+
+.activity-item:hover {
+  background: #f1f5f9;
+  transform: translateX(3px);
+}
+
+.activity-item strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 17px;
+  color: #111827;
+}
+
+.activity-item p {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: #365b82;
+}
+
+.activity-item small {
+  font-size: 13px;
+  color: #64748b;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+
+  .main-content {
+    padding: 24px;
+  }
+
+  .page-header h1 {
+    font-size: 34px;
+  }
+
+  .page-header p {
+    font-size: 17px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .card strong {
+    font-size: 36px;
+  }
+
+  .content-box {
+    padding: 24px;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .primary-button.small {
+    width: auto;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+
+  .main-content {
+    padding: 18px;
+  }
+
+  .page-header {
+    margin-bottom: 24px;
+  }
+
+  .page-header h1 {
+    font-size: 30px;
+  }
+
+  .page-header p {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card span {
+    font-size: 16px;
+  }
+
+  .card strong {
+    font-size: 32px;
+  }
+
+  .card small {
+    font-size: 14px;
+  }
+
+  .content-box {
+    padding: 20px;
+    margin-bottom: 22px;
+  }
+
+  .section-header h2,
+  .content-box > h2 {
+    font-size: 24px;
+  }
+
+  .project-item {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .project-item > span {
+    align-self: flex-start;
+  }
+
+  .primary-button.small {
+    width: 100%;
+  }
+} 
