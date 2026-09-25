@@ -45,7 +45,14 @@ export default function ForgotPassword() {
 
           <label>Email</label>
 
-          <input type="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) =>
+              setEmail(e.target.value)
+            }
+          />
 
           {error && (
             <p className="error-message">
@@ -70,4 +77,4 @@ export default function ForgotPassword() {
 
     </div>
   );
-}  
+} 
