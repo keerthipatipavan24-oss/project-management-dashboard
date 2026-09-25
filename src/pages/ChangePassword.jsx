@@ -64,22 +64,30 @@ export default function ChangePassword() {
 
       <Sidebar />
 
-      <main className="main-content">
+      <main className="change-password-content">
 
-        <header className="page-header">
-          <div>
-            <h1>Change Password</h1>
-            <p>Update your account password.</p>
-          </div>
+        <header className="change-password-header">
+
+          <h1>Change Password</h1>
+
+          <p>
+            Update your account password.
+          </p>
+
         </header>
 
-        <section className="content-box password-box">
+        <section className="change-password-card">
 
           <h2>Change Password</h2>
 
-          <form onSubmit={handlePasswordChange}>
+          <form
+            className="change-password-form"
+            onSubmit={handlePasswordChange}
+          >
 
-            <label>Current Password</label>
+            <label>
+              Current Password
+            </label>
 
             <input
               type="password"
@@ -90,7 +98,9 @@ export default function ChangePassword() {
               placeholder="Enter current password"
             />
 
-            <label>New Password</label>
+            <label>
+              New Password
+            </label>
 
             <input
               type="password"
@@ -101,7 +111,9 @@ export default function ChangePassword() {
               placeholder="Enter new password"
             />
 
-            <label>Confirm Password</label>
+            <label>
+              Confirm Password
+            </label>
 
             <input
               type="password"
@@ -113,22 +125,22 @@ export default function ChangePassword() {
             />
 
             {error && (
-              <p className="error-message">
+              <p className="change-password-error">
                 {error}
               </p>
             )}
 
             {message && (
-              <p className="success-message">
+              <p className="change-password-success">
                 {message}
               </p>
             )}
 
-            <div className="button-row">
+            <div className="change-password-buttons">
 
               <button
                 type="button"
-                className="secondary-button"
+                className="change-password-cancel"
                 onClick={() => navigate("/settings")}
               >
                 Cancel
@@ -136,7 +148,7 @@ export default function ChangePassword() {
 
               <button
                 type="submit"
-                className="primary-button"
+                className="change-password-submit"
               >
                 Change Password
               </button>
