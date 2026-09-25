@@ -1,8 +1,5 @@
 import { useState } from "react";
-import {
-  Link,
-  useNavigate,
-} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import "./ForgotPassword.css"; 
 
 export default function ForgotPassword() {
@@ -48,14 +45,7 @@ export default function ForgotPassword() {
 
           <label>Email</label>
 
-          <input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) =>
-              setEmail(e.target.value)
-            }
-          />
+          <input type="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
           {error && (
             <p className="error-message">
@@ -80,4 +70,4 @@ export default function ForgotPassword() {
 
     </div>
   );
-} 
+}  
