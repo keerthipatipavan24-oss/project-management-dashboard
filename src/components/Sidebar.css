@@ -89,7 +89,7 @@
 
 
 /* =========================
-   MOBILE
+   TABLET / MOBILE
 ========================= */
 
 @media (max-width: 700px) {
@@ -99,7 +99,7 @@
     min-width: 0;
     min-height: auto;
 
-    padding: 12px;
+    padding: 10px;
   }
 
   .sidebar-logo {
@@ -107,36 +107,76 @@
   }
 
   .sidebar nav {
+    display: flex;
     flex-direction: row;
+
+    width: 100%;
 
     justify-content: space-between;
 
-    gap: 5px;
+    gap: 4px;
   }
 
   .nav-item {
     flex: 1;
+    min-width: 0;
 
     justify-content: center;
 
-    padding: 11px 5px;
+    padding: 11px 2px;
 
     font-size: 13px;
 
     text-align: center;
+
+    white-space: nowrap;
   }
 }
 
 
 /* =========================
-   VERY SMALL MOBILE
+   SMALL MOBILE
 ========================= */
 
 @media (max-width: 400px) {
 
-  .nav-item {
-    font-size: 11px;
+  .sidebar {
+    padding: 8px 5px;
+  }
 
-    padding: 10px 3px;
+  .sidebar nav {
+    gap: 2px;
+  }
+
+  .nav-item {
+    padding: 10px 1px;
+
+    font-size: 10px;
+
+    border-radius: 7px;
+  }
+}
+
+
+/* =========================
+   320px MOBILE
+========================= */
+
+@media (max-width: 320px) {
+
+  .sidebar {
+    padding: 7px 4px;
+  }
+
+  .sidebar nav {
+    gap: 2px;
+  }
+
+  .nav-item {
+    padding: 9px 1px;
+
+    font-size: 9px;
+
+    border-radius: 6px;
   }
 } 
